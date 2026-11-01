@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Quản Lý Phòng Net & Game Trực Tuyến - K19 Nhóm 05</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            background: linear-gradient(180deg, #f0f9ff 0%, #f8fafc 100%);
+            color: #0f172a;
+        }
+        .landing-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 14px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .hero-section {
+            padding: 60px 20px 40px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .tag-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #eff6ff;
+            color: var(--primary);
+            border: 1px solid #bfdbfe;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .hero-h1 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+        .hero-sub {
+            font-size: 16px;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 36px;
+        }
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+        .p-card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s;
+        }
+        .p-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: #94a3b8;
+        }
+        .p-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="landing-header">
+        <div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; color: var(--primary);">
+            <i class="fas fa-desktop"></i>
+            <span>QUẢN LÝ QUÁN NET</span>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <a href="install.php" class="btn-fresh btn-secondary btn-sm"><i class="fas fa-database"></i> CSDL XAMPP</a>
+            <a href="login.php" class="btn-fresh btn-sm"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+        </div>
+    </header>
+
+    <!-- Hero Header -->
+    <section class="hero-section">
+        <div class="tag-pill">
+            <i class="fas fa-graduation-cap"></i> Đồ án Thực tập cơ sở ngành - K19 Nhóm 05
+        </div>
+        <h1 class="hero-h1">HỆ THỐNG QUẢN LÝ PHÒNG MÁY & DỊCH VỤ TRÒ CHƠI TRỰC TUYẾN</h1>
+        <p class="hero-sub">
+            Triển khai chuẩn mực theo Phác thảo giao diện Wireframe (Visual Paradigm - Tuần 5), đáp ứng đầy đủ 15 Use Case khảo sát thực tế và 16 bảng dữ liệu CSDL quan hệ 3NF.
+        </p>
+    </section>
+
+    <!-- Main Navigation Portals -->
+    <section class="portal-grid">
+        <!-- Portal 1: Cashier & Admin (Focus of wireframes image2 & image3) -->
+        <div class="p-card" style="border-top: 4px solid var(--primary);">
+            <div>
+                <div class="p-icon" style="background: #eff6ff; color: var(--primary);">
+                    <i class="fas fa-cash-register"></i>
+                </div>
+                <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Quầy Thu Ngân (Admin)</h3>
+                <p style="color: #64748b; font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+                    Màn hình làm việc của thu ngân chuẩn theo phác thảo: <strong>Màn hình Nạp tiền</strong>, <strong>Màn hình Thông tin tài khoản khách hàng</strong>, Sơ đồ 20 máy, duyệt đơn bếp và báo cáo doanh thu.
+                </p>
+                <div style="font-size: 12px; color: var(--accent-hover); font-weight: 600; margin-bottom: 20px;">
+                    <i class="fas fa-check-circle"></i> Đúng 100% bản vẽ Wireframe Tuần 5
+                </div>
+            </div>
+            <a href="admin.php" class="btn-fresh" style="width: 100%;">
+                Vào Bàn Làm Việc Thu Ngân <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Portal 2: Gamer Station -->
+        <div class="p-card" style="border-top: 4px solid var(--accent);">
+            <div>
+                <div class="p-icon" style="background: #ecfdf5; color: var(--accent);">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Máy Trạm Khách Chơi</h3>
+                <p style="color: #64748b; font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+                    Giao diện máy trạm: Đồng hồ đếm thời gian chơi từng giây, tiền giờ tạm tính, cảnh báo số dư thông minh khi dưới 15 phút, nạp VietQR online và gọi đồ ăn tại chỗ.
+                </p>
+                <div style="font-size: 12px; color: var(--accent-hover); font-weight: 600; margin-bottom: 20px;">
+                    <i class="fas fa-check-circle"></i> Đầy đủ tính năng UC1 đến UC8
+                </div>
+            </div>
+            <a href="client.php" class="btn-fresh btn-success" style="width: 100%;">
+                Vào Màn Hình Khách Chơi <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Portal 3: Register -->
+        <div class="p-card" style="border-top: 4px solid #f59e0b;">
+            <div>
+                <div class="p-icon" style="background: #fffbeb; color: #d97706;">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Đăng Ký Hội Viên Mới</h3>
+                <p style="color: #64748b; font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+                    Form đăng ký hội viên dành cho khách mới: Nhập username, số điện thoại, ngày sinh, mật khẩu. Tự động kích hoạt tài khoản và tặng ngay 10.000 VNĐ tân thủ.
+                </p>
+                <div style="font-size: 12px; color: var(--accent-hover); font-weight: 600; margin-bottom: 20px;">
+                    <i class="fas fa-gift"></i> Tặng 10.000đ kích hoạt trải nghiệm
+                </div>
+            </div>
+            <a href="register.php" class="btn-fresh btn-secondary" style="width: 100%;">
+                Đăng Ký Hội Viên Ngay <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Details Box -->
+    <section style="max-width: 1100px; margin: 0 auto 60px; padding: 0 20px;">
+        <div class="wireframe-box" style="padding: 24px; box-shadow: var(--shadow-sm);">
+            <div class="wireframe-box-title">Đặc tả kỹ thuật & Khảo sát nghiệp vụ</div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; font-size: 13px; color: #475569;">
+                <div>
+                    <h4 style="color: #0f172a; margin-bottom: 6px;"><i class="fas fa-database" style="color: var(--primary);"></i> 16 Bảng dữ liệu quan hệ 3NF</h4>
+                    <p>Khách chơi, Tài khoản, Phiên chơi, Chi tiết sử dụng máy, Bảng giá, Loại máy, Máy trạm, Nạp tiền, Khuyến mãi, Menu món ăn, Đơn dịch vụ, Nhân viên, Báo cáo...</p>
+                </div>
+                <div>
+                    <h4 style="color: #0f172a; margin-bottom: 6px;"><i class="fas fa-exchange-alt" style="color: var(--accent);"></i> Chuyển máy bảo lưu phiên (UC12)</h4>
+                    <p>Chốt chi phí máy cũ, tạo chi tiết sử dụng tại máy mới, giữ nguyên mã phiên chơi và cập nhật trạng thái phòng máy tự động.</p>
+                </div>
+                <div>
+                    <h4 style="color: #0f172a; margin-bottom: 6px;"><i class="fas fa-bell" style="color: var(--danger);"></i> Cảnh báo thông minh dưới 15 phút</h4>
+                    <p>Hiện thực hóa 75% nguyện vọng từ khảo sát khách chơi quán net: Tự động tính thời gian chơi còn lại và cảnh báo để tránh văng game đột ngột.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 24px; border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 13px;">
+        Hệ thống Quản lý Quán Net • Thiết kế trên nền tảng XAMPP (Apache / MariaDB / PHP 8.2+)
+    </footer>
+</body>
+</html>
